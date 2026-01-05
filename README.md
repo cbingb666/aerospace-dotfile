@@ -58,16 +58,14 @@ Alt+k  上   Alt+l  右
 
 微信主窗口自动平铺在 WS4，但聊天窗口、设置等非主窗口自动浮动，避免遮挡其他应用。
 
-## 配置路径
-
-- **配置文件**: `~/.aerospace.toml`
-- **本仓库**: `~/.config/aerospace/`
+## 配置文件
+[./aerospace.toml](https://github.com/cbingb666/aerospace-dotfile/blob/main/aerospace.toml)
 
 ## 参考资源
 
-- [AeroSpace 官方文档](https://nikitabobko.github.io/AeroSpace)
+- [AeroSpace 官方仓库](https://github.com/nikitabobko/AeroSpace)
+- [AeroSpace 官方指南](https://nikitabobko.github.io/AeroSpace/guide)
 - [命令完整列表](https://nikitabobko.github.io/AeroSpace/commands)
-- [工作区自动往返](https://nikitabobko.github.io/AeroSpace/guide#workspace-auto-back-and-forth)
 
 ---
 
