@@ -275,9 +275,15 @@ if.app-id = 'org.alacritty'
 run = 'move-node-to-workspace 3'
 
 # 工作区4: 通信
+# 微信主窗口保持平铺
 [[on-window-detected]]
     if.app-id = 'com.tencent.xinWeChat'
-    run = 'move-node-to-workspace 4'
+    if.window-title-regex-substring = '微信'
+    run = ['move-node-to-workspace 4']
+# 微信其他窗口浮动(聊天窗口、设置等)
+[[on-window-detected]]
+    if.app-id = 'com.tencent.xinWeChat'
+    run = ['layout floating', 'move-node-to-workspace 4']
 [[on-window-detected]]
     if.app-id = 'ru.keepcoder.Telegram'
     run = 'move-node-to-workspace 4'
