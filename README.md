@@ -59,8 +59,28 @@ Alt+k  上   Alt+l  右
 
 微信主窗口自动平铺在 `4-Chat` 工作区，但聊天窗口、设置等非主窗口自动浮动，避免遮挡其他应用。
 
+## 禁止平铺的应用
+
+以下应用强制使用浮动布局，不参与平铺：
+
+- **Quantumult X** — 网络工具类应用保持浮动，方便随时查看和操作
+
+**添加方法**：在 `aerospace.toml` 的 `on-window-detected` 部分添加：
+
+```toml
+[[on-window-detected]]
+    if.app-id = 'com.example.app'
+    run = 'layout floating'
+```
+
 ## 配置文件
 [./aerospace.toml](https://github.com/cbingb666/aerospace-dotfile/blob/main/aerospace.toml)
+
+## 查询所有应用的
+
+**see**: [commad/list-app](https://nikitabobko.github.io/AeroSpace/commands#list-apps)
+
+`aerospace list-apps --format "%{app-name} | %{app-bundle-id}"`
 
 ## 参考资源
 

@@ -253,3 +253,8 @@ run = 'move-node-to-workspace 3-Terminal'
     if.app-id = 'com.google.Chrome' # chrome hub
     if.window-title-regex-substring = 'hub$'
     run = 'move-node-to-workspace Other'
+
+# 禁止平铺的应用（使用浮动布局）
+[[on-window-detected]]
+    if.app-id = 'com.crossutility.quantumult-x'  # Quantumult X
+    run = 'layout floating'
