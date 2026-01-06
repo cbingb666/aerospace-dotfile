@@ -5,7 +5,7 @@
 ## 核心特性
 
 - **零边距极简布局**：窗口之间无缝拼接，最大化屏幕利用率
-- **10 个常驻工作区**：数字键 1-9 + P 工作区，即使空窗口也不消失
+- **语义化工作区命名**：6 个常驻工作区，名称即用途（Browser/Code/Terminal/Chat/Music/Other）
 - **智能应用自动归类**：打开应用自动跳到指定工作区，无需手动拖拽
 - **多显示器友好**：支持跨显示器移动窗口，焦点自动跟随
 
@@ -24,9 +24,10 @@ Alt+k  上   Alt+l  右
 - `Alt+Comma` — 切换 accordion 布局
 
 ### 工作区管理
-- `Alt+1~9` — 切换到工作区 1-9
-- `Alt+P` — 切换到 P 工作区(副浏览器)
-- `Alt+Shift+1~9` — 移动当前窗口到目标工作区
+- `Alt+1~5` — 切换到 Browser/Code/Terminal/Chat/Music 工作区
+- `Alt+O` — 切换到 Other 工作区
+- `Alt+Shift+1~5` — 移动当前窗口到对应工作区
+- `Alt+Shift+O` — 移动当前窗口到 Other 工作区
 - `Alt+Tab` — 返回上一个工作区
 
 ### 多显示器
@@ -44,16 +45,16 @@ Alt+k  上   Alt+l  右
 
 | 工作区 | 用途 | 自动归类应用 |
 |--------|------|--------------|
-| **1** | 主浏览器 | Chrome (bingb) |
-| **2** | 开发 IDE | VSCode, Cursor, IntelliJ, PyCharm, WebStorm, Zed |
-| **3** | 终端 | Terminal, Alacritty |
-| **4** | 通讯工具 | 微信(主窗口平铺,其他浮动), Telegram |
-| **5** | 音乐 | Apple Music |
-| **P** | 副浏览器 | 115浏览器, Chrome (hub) |
+| **1-Browser** | 主浏览器 | Chrome (bingb) |
+| **2-Code** | 开发 IDE | VSCode, Cursor, IntelliJ, PyCharm, WebStorm, Zed |
+| **3-Terminal** | 终端 | Terminal, Alacritty |
+| **4-Chat** | 通讯工具 | 微信(主窗口平铺,其他浮动), Telegram |
+| **5-Music** | 音乐 | Apple Music |
+| **O-Other** | 其他浏览器 | 115浏览器, Chrome (hub) |
 
 ## 微信特殊处理
 
-微信主窗口自动平铺在 WS4，但聊天窗口、设置等非主窗口自动浮动，避免遮挡其他应用。
+微信主窗口自动平铺在 `4-Chat` 工作区，但聊天窗口、设置等非主窗口自动浮动，避免遮挡其他应用。
 
 ## 配置文件
 [./aerospace.toml](https://github.com/cbingb666/aerospace-dotfile/blob/main/aerospace.toml)

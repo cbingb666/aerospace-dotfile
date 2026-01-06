@@ -1,0 +1,9 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(aerospace reload-config:*)",
+      "Bash(aerospace list-workspaces:*)",
+      "Bash(aerospace workspace:*)"
+    ]
+  }
+}
