@@ -54,7 +54,7 @@ automatically-unhide-macos-hidden-apps = true
 # Fallback value (if you omit the key): persistent-workspaces = []
 persistent-workspaces = [
     "1-Browser", "2-Code", "3-Terminal", "4-Chat", "5-Music",
-    "O-Other"
+    "Other", "Tmp"
 ]
 
 # A callback that runs every time binding mode changes
@@ -142,7 +142,8 @@ on-mode-changed = []
     alt-3 = 'workspace 3-Terminal'
     alt-4 = 'workspace 4-Chat'
     alt-5 = 'workspace 5-Music'
-    alt-o = 'workspace O-Other'
+    alt-o = 'workspace Other'
+    alt-t = 'workspace Tmp'
 
     # See: https://nikitabobko.github.io/AeroSpace/commands#move-node-to-workspace
     alt-shift-1 = 'move-node-to-workspace 1-Browser'
@@ -150,7 +151,8 @@ on-mode-changed = []
     alt-shift-3 = 'move-node-to-workspace 3-Terminal'
     alt-shift-4 = 'move-node-to-workspace 4-Chat'
     alt-shift-5 = 'move-node-to-workspace 5-Music'
-    alt-shift-o = 'move-node-to-workspace O-Other'
+    alt-shift-o = 'move-node-to-workspace Other'
+    alt-shift-t = 'move-node-to-workspace Tmp'
 
     # See: https://nikitabobko.github.io/AeroSpace/commands#workspace-back-and-forth
     alt-tab = 'workspace-back-and-forth'
@@ -246,8 +248,8 @@ run = 'move-node-to-workspace 3-Terminal'
 # 工作区 Other
 [[on-window-detected]]
     if.app-id = 'org.115browser.115Browser'  # 115浏览器
-    run = 'move-node-to-workspace O-Other'
+    run = 'move-node-to-workspace Other'
 [[on-window-detected]]
     if.app-id = 'com.google.Chrome' # chrome hub
     if.window-title-regex-substring = 'hub$'
-    run = 'move-node-to-workspace O-Other'
+    run = 'move-node-to-workspace Other'

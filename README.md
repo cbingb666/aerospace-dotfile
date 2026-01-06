@@ -5,7 +5,7 @@
 ## 核心特性
 
 - **零边距极简布局**：窗口之间无缝拼接，最大化屏幕利用率
-- **语义化工作区命名**：6 个常驻工作区，名称即用途（Browser/Code/Terminal/Chat/Music/Other）
+- **语义化工作区命名**：7 个常驻工作区，名称即用途（Browser/Code/Terminal/Chat/Music/Other/Tmp）
 - **智能应用自动归类**：打开应用自动跳到指定工作区，无需手动拖拽
 - **多显示器友好**：支持跨显示器移动窗口，焦点自动跟随
 
@@ -26,8 +26,10 @@ Alt+k  上   Alt+l  右
 ### 工作区管理
 - `Alt+1~5` — 切换到 Browser/Code/Terminal/Chat/Music 工作区
 - `Alt+O` — 切换到 Other 工作区
+- `Alt+T` — 切换到 Tmp 临时工作区
 - `Alt+Shift+1~5` — 移动当前窗口到对应工作区
 - `Alt+Shift+O` — 移动当前窗口到 Other 工作区
+- `Alt+Shift+T` — 移动当前窗口到 Tmp 工作区
 - `Alt+Tab` — 返回上一个工作区
 
 ### 多显示器
@@ -50,7 +52,8 @@ Alt+k  上   Alt+l  右
 | **3-Terminal** | 终端 | Terminal, Alacritty |
 | **4-Chat** | 通讯工具 | 微信(主窗口平铺,其他浮动), Telegram |
 | **5-Music** | 音乐 | Apple Music |
-| **O-Other** | 其他浏览器 | 115浏览器, Chrome (hub) |
+| **Other** | 其他浏览器 | 115浏览器, Chrome (hub) |
+| **Tmp** | 临时工作区 | - |
 
 ## 微信特殊处理
 
