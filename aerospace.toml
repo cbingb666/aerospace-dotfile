@@ -53,7 +53,7 @@ automatically-unhide-macos-hidden-apps = true
 # This config version is only available since 'config-version = 2'
 # Fallback value (if you omit the key): persistent-workspaces = []
 persistent-workspaces = [
-    "1-Browser", "2-Code", "3-Terminal", "4-Chat", "5-Music",
+    "1-Browser", "2-Code", "3-Terminal", "4-Debug", "5-Chat", "6-Music",
     "Other", "Tmp"
 ]
 
@@ -140,8 +140,9 @@ on-mode-changed = []
     alt-1 = 'workspace 1-Browser'
     alt-2 = 'workspace 2-Code'
     alt-3 = 'workspace 3-Terminal'
-    alt-4 = 'workspace 4-Chat'
-    alt-5 = 'workspace 5-Music'
+    alt-4 = 'workspace 4-Debug'
+    alt-5 = 'workspace 5-Chat'
+    alt-6 = 'workspace 6-Music'
     alt-o = 'workspace Other'
     alt-t = 'workspace Tmp'
 
@@ -149,8 +150,9 @@ on-mode-changed = []
     alt-shift-1 = 'move-node-to-workspace 1-Browser'
     alt-shift-2 = 'move-node-to-workspace 2-Code'
     alt-shift-3 = 'move-node-to-workspace 3-Terminal'
-    alt-shift-4 = 'move-node-to-workspace 4-Chat'
-    alt-shift-5 = 'move-node-to-workspace 5-Music'
+    alt-shift-4 = 'move-node-to-workspace 4-Debug'
+    alt-shift-5 = 'move-node-to-workspace 5-Chat'
+    alt-shift-6 = 'move-node-to-workspace 6-Music'
     alt-shift-o = 'move-node-to-workspace Other'
     alt-shift-t = 'move-node-to-workspace Tmp'
 
@@ -226,32 +228,34 @@ run = 'move-node-to-workspace 3-Terminal'
 if.app-id = 'org.alacritty'
 run = 'move-node-to-workspace 3-Terminal'
 
+# 工作区 Terminal
+[[on-window-detected]]
+    if.app-id = 'com.google.Chrome' # chrome hub
+    if.window-title-regex-substring = 'hub$'
+    run = 'move-node-to-workspace 4-Debug'
+
 # 工作区 Chat
 # 微信主窗口保持平铺
 [[on-window-detected]]
     if.app-id = 'com.tencent.xinWeChat'
     if.window-title-regex-substring = '微信'
-    run = ['move-node-to-workspace 4-Chat']
+    run = ['move-node-to-workspace 5-Chat']
 # 微信其他窗口浮动(聊天窗口、设置等)
 [[on-window-detected]]
     if.app-id = 'com.tencent.xinWeChat'
-    run = ['layout floating', 'move-node-to-workspace 4-Chat']
+    run = ['layout floating', 'move-node-to-workspace 5-Chat']
 [[on-window-detected]]
     if.app-id = 'ru.keepcoder.Telegram'
-    run = 'move-node-to-workspace 4-Chat'
+    run = 'move-node-to-workspace 5-Chat'
 
 # 工作区 Music
 [[on-window-detected]]
     if.app-id = 'com.apple.Music'
-    run = 'move-node-to-workspace 5-Music'
+    run = 'move-node-to-workspace 6-Music'
 
 # 工作区 Other
 [[on-window-detected]]
     if.app-id = 'org.115browser.115Browser'  # 115浏览器
-    run = 'move-node-to-workspace Other'
-[[on-window-detected]]
-    if.app-id = 'com.google.Chrome' # chrome hub
-    if.window-title-regex-substring = 'hub$'
     run = 'move-node-to-workspace Other'
 
 # 禁止平铺的应用（使用浮动布局）
