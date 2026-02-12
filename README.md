@@ -1,6 +1,6 @@
 # AeroSpace 个人配置
 
-这是我的个人 AeroSpace 配置。主要包含：
+这是我的个人 [AeroSpace](https://github.com/nikitabobko/AeroSpace) 配置。主要包含：
 
 - **工作区管理**：9 个工作区，支持快速切换和窗口移动
 - **多显示器支持**：快捷键在显示器间移动窗口和焦点
