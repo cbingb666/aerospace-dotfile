@@ -36,6 +36,17 @@
        run = ['layout floating']
    ```
 
+3. **绑定快捷键到切换脚本**
+
+   在 `[mode.main.binding]` 中添加快捷键绑定：
+   ```toml
+   alt-x = 'exec-and-forget bash ~/.config/aerospace/toggle-float.sh com.example.appname X'
+   ```
+
+   参数说明：
+   - 第一个参数：应用的 Bundle ID
+   - 第二个参数：唯一标识符（建议使用快捷键字母，如 `X`）
+
 **示例配置**（已包含在配置中）:
 ```toml
 # Ghostty 终端
@@ -47,6 +58,11 @@
 [[on-window-detected]]
     if.app-id = 'ai.opencode.desktop'
     run = ['layout floating']
+
+[mode.main.binding]
+    # 绑定快捷键到切换脚本
+    alt-j = 'exec-and-forget bash ~/.config/aerospace/toggle-float.sh com.mitchellh.ghostty J'
+    alt-i = 'exec-and-forget bash ~/.config/aerospace/toggle-float.sh ai.opencode.desktop I'
 ```
 
 **相关快捷键**:
